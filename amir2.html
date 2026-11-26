@@ -18,6 +18,8 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
             gap: 10px;
+            justify-items: center;
+            align-items: center;
         }
 
         .card {
@@ -26,6 +28,7 @@
             border: 5px solid red;
             background-color: blue;
             border-radius: 24px;
+            animation: box 1s   infinite  alternate;
         }
 
         @media (max-width: 575px) {
@@ -42,6 +45,14 @@
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(5, 1fr);
                 height: auto;
+            }
+        }
+        @keyframes box{
+            from{
+                transform: scale(0) rotate(0);
+            }
+            to{
+                transform: scale(0.7) rotate(360deg);
             }
         }
     </style>
